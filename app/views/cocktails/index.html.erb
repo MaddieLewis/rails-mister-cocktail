@@ -1,0 +1,22 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.4) 0%, rgba(0,36,61,0.3) 50%), url(https://c.pxhere.com/photos/e9/69/drink_cocktail_lime_beverage_glass-180295.jpg!d);">
+  <div class="banner-content">
+    <h1>Cocktails</h1>
+    <p>Learn to make your favorite cocktails</p>
+    <a class="btn btn-primary btn-lg"><i class="fas fa-plus"></i> Cocktail</a>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="cards" style= "display:grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 200px; grid-gap: 16px 16px;">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.pexels.com/photos/53025/pexels-photo-53025.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+        <h3 class="card-category"><%= cocktail.name %></h3>
+        <p><%= link_to 'Show', cocktail %></p>
+        <p><%= link_to 'New', new_cocktail_path(cocktail) %></p>
+<!--         <p><i class="fas fa-trash-alt"></i></p>
+ -->
+      </div>
+    <% end %>
+  </div>
+</div>
