@@ -8,7 +8,10 @@
 <p>
   <strong>Doses:</strong>
   <% @cocktail.doses.each do |dose| %>
-    <p><%= dose %></p>
+    <p><%= dose.description %> <%= dose.ingredient.name %></p>
+    <%= link_to dose_path(dose), method: :delete do %>
+      <i class="fas fa-trash-alt"></i>
+    <% end %>
   <% end %>
 </p>
 
@@ -21,7 +24,7 @@
   </div>
 
   <div class="form_inputs">
-    <%= f.input :ingredient, collection: Ingredient.all %>
+    <%= f.association :ingredient, collection: Ingredient.all %>
   </div>
 
   <div class="form-actions">

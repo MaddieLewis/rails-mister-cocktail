@@ -2,7 +2,10 @@
   <div class="banner-content">
     <h1>Cocktails</h1>
     <p>Learn to make your favorite cocktails</p>
-    <a class="btn btn-primary btn-lg"><i class="fas fa-plus"></i> Cocktail</a>
+    <!-- <a class="btn btn-primary btn-lg"><i class="fas fa-plus"></i> Cocktail</a> -->
+    <%= link_to new_cocktail_path do%>
+      <p class="btn btn-primary btn-lg"><i class="fas fa-plus"></i> Cocktail</p>
+    <% end %>
   </div>
 </div>
 
@@ -10,10 +13,10 @@
 <div class="container">
   <div class="cards" style= "display:grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 200px; grid-gap: 16px 16px;">
     <% @cocktails.each do |cocktail| %>
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.pexels.com/photos/53025/pexels-photo-53025.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(https://images.pexels.com/photos/53025/pexels-photo-53025.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260); width: 200px; object-fit: cover; background-repeat: no-repeat;
+  background-size: auto;">
         <h3 class="card-category"><%= cocktail.name %></h3>
         <p><%= link_to 'Show', cocktail %></p>
-        <p><%= link_to 'New', new_cocktail_path(cocktail) %></p>
 <!--         <p><i class="fas fa-trash-alt"></i></p>
  -->
       </div>
