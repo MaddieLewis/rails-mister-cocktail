@@ -2,9 +2,11 @@
 <div class="top-picture" style="background-image: url(<%= @cocktail.photo %>); height: 800px;
   background-position: center;
   background-size: cover;">
-  <%= link_to cocktails_path do %>
-    <i class="fas fa-long-arrow-alt-left"></i>
-  <% end %>
+  <div style="margin-left: 16px; font-size: 32px; color: white;">
+    <%= link_to cocktails_path do %>
+      <i class="fas fa-long-arrow-alt-left"></i>
+    <% end %>
+  </div>
 </div>
 
 <div class="container" style="margin-top: -400px;">
@@ -35,11 +37,11 @@
       <% @cocktail.doses.each do |dose| %>
         <div class="flip-card dose-circle">
           <div class="flip-card-inner">
-            <div class="flip-card-front dose-circle">
-              <p><%= dose.ingredient.name %></p>
+            <div class="flip-card-front dose-circle" style="background-image: url(<%= dose.ingredient.photo %>)">
+              <p style="font-weight: bolder; "><%= dose.ingredient.name %></p>
             </div>
             <div class="flip-card-back dose-circle">
-              <p><%= dose.description %></p>
+              <p style="font-weight: bolder;"><%= dose.description %></p>
             </div>
           </div>
         </div>
@@ -56,7 +58,7 @@
       <%# end %>
     </p> -->
 
-    <%= link_to 'Back', cocktails_path %>
+    <%#= link_to 'Back', cocktails_path %>
 
   </div>
 </div>

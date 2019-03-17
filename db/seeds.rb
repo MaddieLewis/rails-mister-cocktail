@@ -5,9 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
+puts "destroying all seeds ..."
+Cocktail.destroy_all
+Ingredient.destroy_all
+
+
+puts "seeding ingredients ..."
+
+lemon = 'https://images.pexels.com/photos/1536871/pexels-photo-1536871.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+ice = 'https://images.pexels.com/photos/579216/pexels-photo-579216.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+mint = 'https://images.pexels.com/photos/1132718/pexels-photo-1132718.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
+
+Ingredient.create(name: "Lemon", photo: lemon)
+Ingredient.create(name: "Ice", photo: ice)
+Ingredient.create(name: "Mint leaves", photo: mint)
+
+puts "seeding cocktails"
 
 drinks = 'https://c.pxhere.com/photos/57/3f/cups_bar_madrid_drink_cocktail-1324163.jpg!d'
 beach = 'https://cdn.pixabay.com/photo/2013/02/21/19/06/beach-84533_1280.jpg'
