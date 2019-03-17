@@ -66,8 +66,7 @@ h1:hover {
   background-color: transparent;
   width: 150px;
   height: 150px;
-  border: 1px solid #f1f1f1;
-  // perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  margin-right: 8px;
 }
 
 /* This container is needed to position the front and back side */
@@ -95,7 +94,7 @@ h1:hover {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #bbb;
+  // background-color: #bbb;
   color: black;
   p {
     font-size: 16px;
