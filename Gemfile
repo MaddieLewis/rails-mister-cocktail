@@ -19,6 +19,9 @@ gem 'webpacker'
 # gem 'mini_racer', platforms: :ruby
 # gem 'sqlite3', '~> 1.3', '< 1.4'
 # gem "pg"
+gem 'cloudinary', '~> 1.9.1'
+gem 'dotenv-rails', groups: [:development, :test]
+gem 'carrierwave', '~> 1.2'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
